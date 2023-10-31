@@ -7,15 +7,18 @@ import time
 import streamlit as st
 
 # Set your database connection parameters here
-db_host = "localhost"
-db_user = "SQLuser"
-db_password = "Akash@1234"  # Hardcoded database password
-db_name = "customer_data"
+db_host = your_host",         #Enter your local host name.
+db_user = "your_username",    #Enter your database username.
+db_password = "your_password",#Enter your database password.
+db_name = "your_database"     #Enter your database name.
+
 
 # Function to send a WhatsApp message
 def send_whatsapp_message(name, phone_number, label):
     # Load the Chrome driver
     chrome_driver_path = r"C:\new driver\chromedriver-win64\chromedriver-win64\chromedriver.exe"
+    #Enter the path from your local computer. Make sure the above Chrome driver version should be the same as your current Chrome.
+    
     driver = webdriver.Chrome(executable_path=chrome_driver_path)
     driver.get("https://web.whatsapp.com/")
 
