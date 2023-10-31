@@ -6,12 +6,11 @@ import time
 
 # Connect to the MySQL database
 db = mysql.connector.connect(
-    host="localhost",
-    user="SQLuser",
-    password="Akash@1234",
-    database="customer_data"
+    host="your_host",        #Enter your local host name.
+    user="your_username",    #Enter your database username.
+    password="your_password",#Enter your database password.
+    database="your_database" #Enter your database name.
 )
-
 
 # Create a cursor
 cursor = db.cursor()
@@ -24,7 +23,9 @@ existing_customer_message = "Thank you for choosing us!"
 
 # Create a function to send WhatsApp messages
 def send_whatsapp_message(phone_number, message):
-    chrome_driver_path = r"C:\new driver\chromedriver-win64\chromedriver-win64\chromedriver.exe"
+    chrome_driver_path = r"C:\new driver\chromedriver-win64\chromedriver-win64\chromedriver.exe" 
+    #Enter the path from your local computer. Make sure the above Chrome driver version should be the same as your current Chrome.
+    
     driver = webdriver.Chrome(executable_path=chrome_driver_path)
     driver.get("https://web.whatsapp.com")
     time.sleep(300)  # Wait for the user to log in using QR code
