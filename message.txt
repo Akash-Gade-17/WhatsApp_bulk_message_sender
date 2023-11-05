@@ -1,0 +1,2 @@
+hello,
+This is Python generated whatsapp bulk messanger.
